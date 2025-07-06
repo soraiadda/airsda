@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirSda - Acomodações</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-logo">
+                <img src="icons/airsda_main_icon.png" alt="Logo viajante" width="85">
+                AirSda
+            </div>
+            <ul>
+                <li><a href="index.html" class="header-link">Acomodações</a></li>
+                <li><a href="experiencias.html" class="header-link">Experiências</a></li>
+                <li><a href="#" class="header-link" onclick="event.preventDefault(); abrirPopup()">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="main-title"> Acomodações disponíveis para você</h1>
+    <section class="images">
+        <figure>
+            <img src="images/quarto1.jpg" alt="Casa número um">
+            <figcaption>Apartamento confortável no centro</figcaption>
+        </figure>
+        <figure>
+            <img src="images/quarto2.jpg" alt="Casa número dois">
+            <figcaption>Cabana silenciosa no interior</figcaption>
+        </figure>
+        <figure>
+            <img src="images/quarto3.jpg" alt="Casa número três">
+            <figcaption>Studio minimalista com vista para o mar</figcaption>
+        </figure>
+    </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-conteudo">
+
+            <button onclick="window.location.href='cadastrocliente.html'">
+                <img src="icons/newuser2.png" alt="Novo Usuário"><br>
+                Novo cadastro no AirSda</button>
+            <button onclick="window.location.href='cadastroimovel.html'">
+                <img src="icons/new.png" alt="Nova acomodação"><br>
+                Cadastrar meu imóvel</button>
+
+            <button onclick="fecharPopup()">Sair</button>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+    <button onclick="alternarTema()" id="btn-tema">🌙 Modo escuro</button>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirSda - Cadastro de Cliente</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-logo">
+                <img src="icons/airsda_main_icon.png" alt="Logo viajante" width="85">
+                AirSda
+            </div>
+            <ul>
+                <li><a href="index.html" class="header-link">Acomodações</a></li>
+                <li><a href="experiencias.html" class="header-link">Experiências</a></li>
+                <li><a href="#" class="header-link" onclick="event.preventDefault(); abrirPopup()">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="cadastro-main-title"> Cadastro de cliente</h2>
+
+
+        <h2 class="cadastro-form-title"> Por favor preencha com seus dados:</h2>
+        <form id="cadastro-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="datanascimento">Data de Nascimento:</label>
+            <input type="text" id="datanascimento" name="datanascimento" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required>
+
+            <label for="celular">Celular:</label>
+            <input type="tel" required>
+
+            <button type="submit"> Cadastrar</button>
+        </form>
+
+        <div id="popup" class="popup">
+            <div class="popup-conteudo">
+
+                <button onclick="window.location.href='cadastrocliente.html'">
+                    <img src="icons/newuser2.png" alt="Novo Usuário"><br>
+                    Novo cadastro no AirSda</button>
+                <button onclick="window.location.href='cadastroimovel.html'">
+                    <img src="icons/new.png" alt="Nova acomodação"><br>
+                    Cadastrar meu imóvel</button>
+
+                <button onclick="fecharPopup()">Sair</button>
+            </div>
+        </div>
+        <script src="javascript.js"></script>
+        <button onclick="alternarTema()" id="btn-tema">🌙 Modo escuro</button>
+</body>
+
+</html>

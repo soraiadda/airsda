@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirSda - Cadastro de Anfitrião</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-logo">
+                <img src="icons/airsda_main_icon.png" alt="Logo viajante" width="85">
+                AirSda
+            </div>
+            <ul>
+                <li><a href="index.html" class="header-link">Acomodações</a></li>
+                <li><a href="experiencias.html" class="header-link">Experiências</a></li>
+                <li><a href="#" class="header-link" onclick="event.preventDefault(); abrirPopup()">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="cadastro-main-title"> Cadastro de imóvel</h2>
+        </p>
+
+        <h2 class="cadastro-form-title"> Por favor preencha com os dados do seu imóvel:</h2>
+        <form id="cadastro-form">
+
+            <label for="tipoimovel">Tipo de imóvel:</label>
+            <select name="tipoimovel" id="tipoimovel">
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="chale">Chalé</option>
+                <option value="studio">Studio</option>
+            </select>
+            <label for="quartos">Possui quantos quartos no total?</label>
+            <select name="tipoimovel" id="tipoimovel">
+                <option value="um">1 quarto</option>
+                <option value="dois">2 quartos</option>
+                <option value="tres">3 quartos</option>
+                <option value="quatro">4 quartos</option>
+                <option value="mais">5 quartos</option>
+                <option value="um">6 quarto</option>
+                <option value="dois">7 quartos</option>
+                <option value="tres">8 quartos</option>
+                <option value="quatro">9 quartos</option>
+                <option value="mais">mais de 9 quartos</option>
+            </select>
+            <label for="areaext">Possui área externa?</label>
+            <select name="tipoimovel" id="tipoimovel">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <label for="localimovel">Fica localizado em:</label>
+            <select name="localimovel" id="localimovel">
+                <option value="urbana">Área urbana</option>
+                <option value="rural">Área rural</option>
+                <option value="rural">Outra</option>
+            </select>
+            <label for="enderecoimovel">Endereço:</label>
+            <input type="text" placeholder="Digite aqui o endereço do imóvel" required>
+            <label for="enderecoimovel">Número:</label>
+            <input type="text" placeholder="Digite aqui o número do imóvel" required>
+            <label for="bairroimovel">Bairro:</label>
+            <input type="text" placeholder="Digite aqui o bairro" required>
+            <label for="descricao">Descrição do imóvel:</label>
+            <textarea id="descricao" name="descricao" rows="5" cols="40"
+                placeholder="Digite aqui uma descrição detalhada do imóvel..."></textarea>
+
+            <button type="submit"> Cadastrar</button>
+        </form>
+
+        <div id="popup" class="popup">
+            <div class="popup-conteudo">
+
+                <button onclick="window.location.href='cadastrocliente.html'">
+                    <img src="icons/newuser2.png" alt="Novo Usuário"><br>
+                    Novo cadastro no AirSda</button>
+                <button onclick="window.location.href='cadastroimovel.html'">
+                    <img src="icons/new.png" alt="Nova acomodação"><br>
+                    Cadastrar meu imóvel</button>
+
+                <button onclick="fecharPopup()">Sair</button>
+            </div>
+        </div>
+        <script src="javascript.js"></script>
+        <button onclick="alternarTema()" id="btn-tema">🌙 Modo escuro</button>
+</body>
+
+</html>
